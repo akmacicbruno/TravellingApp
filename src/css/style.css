@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&family=Rubik+Bubbles&display=swap");
+html {
+  margin: 0;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #051923;
+}
+
+body {
+  background-color: #051923;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  height: 100%;
+}
+.homepage__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.homepage__user-title--text {
+  font-family: "Rubik Bubbles";
+  font-weight: 100;
+  color: white;
+}
+.homepage__user-signout {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage__user-signout-svg {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  color: #00A6FB;
+}
+.homepage__user-signout-svg:hover {
+  color: white;
+  cursor: pointer;
+}
+.homepage__lottie {
+  position: absolute;
+}
+.homepage__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+.homepage__add-input {
+  width: inherit;
+  height: 2.5rem;
+  margin-bottom: 0 !important;
+}
+.homepage__add-input-field {
+  background-color: #006494;
+  outline: none;
+  border: none;
+}
+.homepage__add-input-field::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.homepage__add-input-field:-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.homepage__add-input-field::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.homepage__add-input-field:focus {
+  background-color: black;
+  color: white;
+}
+.homepage__add-icon {
+  margin-left: 1.25rem;
+  height: 2.5rem;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.9375rem;
+  background-color: #00A6FB;
+  padding: 0.0625rem 0rem;
+  align-items: center;
+}
+.homepage__add-icon-svg {
+  cursor: pointer;
+  height: 2.5rem !important;
+  width: auto !important;
+}
+.homepage__add-icon-svg:hover {
+  color: white;
+}
+.homepage__content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.homepage__content__card {
+  width: 15.625rem;
+  height: auto;
+  border: 0.0625rem solid black;
+  border-radius: 0.9375rem;
+  padding: 1.25rem;
+  margin: 0.625rem;
+  background-color: #00A6FB;
+}
+.homepage__content__card:hover {
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+}
+.homepage__content__card-img {
+  width: 70%;
+  height: auto;
+  border-radius: 0.625rem;
+}
+.homepage__content__card-title {
+  font-size: 1.5625rem;
+  font-weight: 400;
+  margin: 0.9375rem 0rem;
+  color: #051923;
+  font-weight: bold;
+}
+.homepage__content__card-desc {
+  margin-bottom: 0.9375rem;
+  text-align: justify;
+}
+.homepage__content__card-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage__content__card-icons-svg {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+.homepage__content__card-icons-svg:hover {
+  color: white;
+}
+
+.accordion-button {
+  background-color: #006494;
+  color: white;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+  background-color: #051923;
+}
+
+.login {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.login__title {
+  font-family: "Rubik Bubbles";
+  color: #006494;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+}
+.login__content {
+  height: 18.75rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+.login__content-input {
+  width: inherit;
+  height: 2.5rem;
+  font-size: 1.5625rem;
+  margin: 0rem;
+  padding: 0rem 0.625rem;
+  font-family: "Poppins";
+}
+.login__content-input > #basic-addon1 {
+  background-color: #00A6FB;
+}
+.login__content-input-field {
+  background-color: #006494;
+  outline: none;
+  border: none;
+}
+.login__content-input-field::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.login__content-input-field:-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.login__content-input-field::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.login__content-input-field:focus {
+  background-color: black;
+  color: white;
+}
+.login__content-button {
+  margin-bottom: 0.9375rem;
+}/*# sourceMappingURL=style.css.map */

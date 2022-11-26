@@ -1,0 +1,213 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+$light-blue: #00A6FB;
+$primary-blue: #006494;
+$dark-blue: #051923;
+
+$shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&family=Rubik+Bubbles&display=swap');
+html {
+    margin: 0;
+    padding: toRem(20);
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: $dark-blue;
+}
+body {
+    background-color: $dark-blue;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    height: 100%;
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: toRem(20);
+        &-title {
+            &--text {
+                font-family:'Rubik Bubbles';
+                font-weight: 100;
+                color: white;
+            }
+        }
+        &-signout {
+            height: toRem(40);
+            width: toRem(40);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-svg {
+                height: toRem(40) !important;
+                width: toRem(40) !important;
+                color: $light-blue;
+                &:hover {
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    &__lottie {
+        position: absolute;
+    }
+    &__add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: toRem(40);
+        margin-top: toRem(40);
+        &-input {
+            width: inherit;
+            height: toRem(40);
+            margin-bottom: 0 !important;
+            &-field {
+                background-color: $primary-blue;
+                outline: none;
+                border: none;
+                &::placeholder {
+                    color: white;
+                    opacity: 0.7;
+                }
+                &:focus {
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+        &-icon {
+            margin-left: toRem(20);
+            height: toRem(40);
+            width: auto;
+            display: flex;
+            justify-content: center;
+            border-radius: toRem(15);
+            background-color: $light-blue;
+            padding: toRem(1) toRem(0);
+            align-items: center;
+            &-svg {
+                cursor: pointer;
+                height: toRem(40) !important;
+                width: auto !important;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        &__card {
+            width: toRem(250);
+            height: auto;
+            border: toRem(1) solid black;
+            border-radius: toRem(15);
+            padding: toRem(20);
+            margin: toRem(10);
+            background-color: $light-blue;
+            &:hover {
+                box-shadow: $shadow;
+            }
+            &-img {
+                width: 70%;
+                height: auto;
+                border-radius: toRem(10);
+            }
+            &-title {
+                font-size: toRem(25);
+                font-weight: 400;
+                margin: toRem(15) toRem(0);
+                color: $dark-blue;
+                font-weight: bold;
+            }
+            &-desc {
+                margin-bottom: toRem(15);
+                text-align: justify;
+            }
+            &-icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &-svg {
+                    height: toRem(30);
+                    width: toRem(30);
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+            }
+        }
+    }
+}
+.accordion-button {
+    background-color: $primary-blue;
+    color: white;
+    &::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+    }
+}
+.accordion-body {
+    background-color: $dark-blue;
+}
+.login {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+        font-family: 'Rubik Bubbles';
+        color: $primary-blue;
+        text-transform: uppercase;
+        letter-spacing: toRem(3);
+
+    }
+    &__content {
+        height: toRem(300);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        &-input {
+            width: inherit;
+            height: toRem(40);
+            font-size: toRem(25);
+            margin: toRem(0);
+            padding: toRem(0) toRem(10);
+            font-family: 'Poppins';
+            & > #basic-addon1 {
+                background-color: $light-blue;
+            }
+            &-field {
+                background-color: $primary-blue;
+                outline: none;
+                border: none;
+                &::placeholder {
+                    color: white;
+                    opacity: 0.7;
+                }
+                &:focus {
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+        &-button {
+            margin-bottom: toRem(15);
+        }
+    }
+}
