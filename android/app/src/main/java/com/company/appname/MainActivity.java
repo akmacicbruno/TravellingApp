@@ -1,4 +1,4 @@
-package com.example.app;
+package com.company.appname;
 
 import com.getcapacitor.BridgeActivity;
 
